@@ -1,0 +1,24 @@
+/**
+ * CodeMirror6 styles
+ */
+
+.cm-editor, .cm-scroller {
+    height: 100%;
+}
+
+.cm-editor.cm-focused {
+    outline: none;
+}
+
+.cm-tooltip {
+    z-index: 1000 !important;
+}
+
+/*
+ * Dark theme overwrites
+ */
+
+.cm-dark.cm-editor,
+.cm-dark .cm-gutters {
+    background-color: #1e1e1e;
+}

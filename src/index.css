@@ -1,0 +1,60 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cube-container {
+  perspective: 1000px;
+}
+
+.cube {
+  width: 300px; /* Increase the width */
+  height: 300px; /* Increase the height */
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 300px; /* Match the width of the cube */
+  height: 300px; /* Match the height of the cube */
+  
+  border: 2px solid gray;
+}
+
+.front  { transform: translateZ(150px); }
+.back   { transform: rotateY(180deg) translateZ(150px); }
+.left   { transform: rotateY(-90deg) translateZ(150px); }
+.right  { transform: rotateY(90deg) translateZ(150px); }
+.top    { transform: rotateX(90deg) translateZ(150px); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+@keyframes rotate {
+  from { transform: rotateX(0) rotateY(0); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+
+.btn {
+  @apply border text-white py-2 px-4 rounded-full text-sm;
+}
+
+.btn:hover {
+  @apply bg-gray-700;
+}
+
+.view-project {
+  @apply border text-white py-2 px-4 rounded-full text-sm;
+}
+
+.project-card img {
+  @apply w-full h-auto;
+}
+
+.explore-btn {
+  @apply border text-white py-3 px-6 rounded-full mt-4 hover:bg-gray-700;
+}
+
+
